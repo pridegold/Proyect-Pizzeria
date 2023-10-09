@@ -1,3 +1,4 @@
+-- Power Bi Visualization https://www.novypro.com/project/proyecto-pizzeria
 -- Ingreso Bruto
 
 SELECT cast(SUM(total_price) as int) AS Total_Revenue FROM Pizza_Sales$;
@@ -47,7 +48,7 @@ CAST(SUM(total_price) * 100 / (SELECT SUM(total_price) from pizza_sales) AS DECI
 FROM pizza_sales where month(order_date) = 1
 GROUP BY pizza_category
 
--- % de ventas segun tamaño de pizza
+-- % de ventas segun tamaÃ±o de pizza
 
 SELECT pizza_size, CAST(SUM(total_price) AS DECIMAL(10,2)) as total_revenue,
 CAST(SUM(total_price) * 100 / (SELECT SUM(total_price) from pizza_sales) AS DECIMAL(10,2)) AS PCT
@@ -84,7 +85,7 @@ GROUP BY pizza_name
 ORDER BY Total_Revenue ASC
 
 
--- Top 5 pizzas vendidas por año
+-- Top 5 pizzas vendidas por aÃ±o
 
 SELECT Top 5 pizza_name, SUM(quantity) AS Total_Pizza_Sold
 FROM pizza_sales
