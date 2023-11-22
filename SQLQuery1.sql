@@ -1,4 +1,4 @@
--- Power Bi Visualization https://www.novypro.com/project/proyecto-pizzeria
+-- Power Bi Visualization https://www.novypro.com/project/ventas-pizzeria
 -- Ingreso Bruto
 
 SELECT cast(SUM(total_price) as int) AS Total_Revenue FROM Pizza_Sales$;
